@@ -1,0 +1,59 @@
+<html lang="en">
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Freep0rt</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="row">
+		  <div class="Freep0rt">
+			<a class="green menu"
+			  href="file:///C:/Users/Sh4wnB0b/Documents/Unreal%20Projects/Net/index.html">Freep0rt</a>
+			<a class="green menu"
+			  href="file:///C:/Users/Sh4wnB0b/Documents/Unreal%20Projects/Net/index.html">Encylopedia</a>
+			<a class="green menu"
+			  href="file:///C:/Users/Sh4wnB0b/Documents/Unreal%20Projects/Net/index.html">Coms</a>
+			<div class="qu4d-1BorderTop">
+			</div>
+		  </div>
+		  <div class="borderLeft">
+		  </div>
+		  <div class="qu4d-1">
+			<h3>qu4d-1</h3>
+			<p class="gray-1">Some text.. <a class="green" href="">Do</a></p>
+			<p class="gray-1">Some text.. <a class="green" href="">it</a></p>
+			<p class="gray-1">Some text.. <a class="green" href="">live</a></p>
+		  </div>
+		  <div class="qu4d-2">
+			<h3>Coms</h3>
+		  </div>
+		  <div id="main">
+			  <ul id="messages"></ul>
+			  <div id="footer">
+				  <form action="">
+					  <input id="m" autocomplete="off" placeholder="Type here..." /><button type="submit">Send</button>
+				  </form>
+			  </div>
+		  </div>
+		  <div class="borderTop">
+		  </div>
+		  <div class="coms">
+		  </div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+		<script>
+			var socket = io();0
+			$('form').submit(function(){
+				socket.emit('chatMessage', $('#m').val());
+				$('#m').val('');
+				return false;
+			});
+			socket.on('chatMessage', function(msg){
+				$('#messages').append($('<li>').text(msg));
+				window.scrollTo(0,document.body.scrollHeight);
+			});
+		</script>
+	</body>
+</html>

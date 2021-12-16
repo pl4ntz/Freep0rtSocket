@@ -1,0 +1,246 @@
+:root {
+--gray-2: #e6e6e6;
+--gray-1: #acacac;
+--gray0: #292929;
+--gray1: #212121;
+--gray2: #171717;
+--gray3: #111111;
+--green: #63b456;
+--greenHover: #47ff60;
+--blue: #4894fe;
+--blueHover: #82c7ff;
+--orange: #ce9178;
+--font-family: "Lucida Console", "Courier New", monospace;
+--padding: 16px;
+--thumb: #525252;
+--thumbHover: #7a7a7a;
+}
+    * { 
+      margin: 0; padding: 0; box-sizing: border-box; }
+
+/* width */
+::-webkit-scrollbar {
+width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: var(--gray0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: var(--thumb);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: var(--thumbHover);
+}
+
+button:hover {
+  background: var(--greenHover);
+}
+
+.Freep0rt,
+.qu4d-1,
+.qu4d-2 {
+position: fixed;
+width: 100%;
+padding: var(--padding);
+background: var(--gray1);
+z-index: 1;
+}
+
+.qu4d-1,
+.qu4d-2 {
+margin: unset;
+}
+
+.qu4d-1:hover,
+.qu4d-2:hover {
+background: var(--gray1);
+}
+
+.Freep0rt {
+top: 0;
+}
+
+.qu4d-1 {
+top: 32px;
+}
+
+.qu4d-2 {
+top: 117px;
+}
+
+.borderTop {
+margin: unset;
+}
+
+.gray-2,
+h3 {
+color: var(--gray-2);
+}
+
+.gray-1 {
+color: var(--gray-1);
+}
+
+.gray0 {
+color: var(--gray0);
+}
+
+.gray1 {
+color: var(--gray1);
+}
+
+.gray2 {
+color: var(--gray2);
+}
+
+.green {
+color: var(--green);
+text-decoration: none;
+}
+
+a.green:link {
+color: var(--green);
+text-decoration: none;
+}
+
+a.green:hover {
+color: var(--greenHover);
+text-decoration: underline;
+}
+
+.menu {
+  margin: -16px -16px 16px -16px;
+padding: 16px;
+}
+
+a.green:hover {
+color: var(--greenHover);
+text-decoration: underline;
+}
+
+.blue {
+color: var(--blue);
+}
+
+.orange {
+color: var(--orange);
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+background: var(--gray1);
+color: var(--gray-1);
+font-family: var(--font-family);
+}
+
+/* .menuButton {
+position: absolute;
+bottom: 16px;
+right: 16px;
+}
+
+.menuBars {
+  width: 20px;
+  height: 4px;
+  background-color: var(--gray-2);
+  margin: 4px 0;
+}*/
+
+@media screen and (min-width: 769px) {
+
+.Freep0rt {
+  float: left;
+  width: 256px;
+  height: 100%;
+  border-right: 1px solid var(--gray2);
+  border-bottom: unset;
+}
+
+.qu4d-1 {
+top: 0;
+}
+
+.qu4d-2 {
+top: 85px;
+}
+
+.borderLeft {
+  position: fixed;
+  height: 100%;
+  margin-left: 256px;
+  border-left: 1px solid var(--gray0);
+}
+
+.qu4d-1,
+.qu4d-2,
+.borderTop {
+  margin-left: 256px;
+}
+
+.qu4d-1BorderTop {
+  margin: -16px -16px 16px -16px;
+  border-top: 1px solid var(--gray0);
+}
+
+.Freep0rt a {
+  display: block;
+  padding-bottom: var(--padding);
+  border-bottom: 1px solid var(--gray2);
+}
+
+.menu:hover {
+background: var(--gray0);
+}
+
+.menu {
+  padding-top: var(--padding);
+  border-top: 1px solid var(--gray0);
+}
+    #main {
+  padding-top: 138px!important;
+      padding-left: 256px;
+    } 
+    form input { border: 0; margin-right: unset!important;  background: var(--gray1); color: var(--green);
+  width: calc(100% - 64px)!important; }
+    form {
+      padding-right: 288px;
+    }
+    #messages {
+  position: relative;
+}
+
+}
+    form { width: 100%; }
+    form input { border: 0; padding: var(--padding);
+  width: calc(100% - 64px)!important; background: var(--gray2); color: var(--green); }
+    :focus-visible {
+        outline: unset;
+    }
+    form button { background: var(--green); border: none; padding: var(--padding); }
+    #messages {list-style-type: none;margin: 0;margin-bottom: 80px;}
+    #messages li { padding-top: var(--padding);
+      margin-left: 16px;
+    }
+    #messages li:nth-child(odd) { background: var(--gray1); }
+    #main {
+      overflow: auto;
+      padding-top: 154px;
+      z-index: 0;
+    } 
+    #footer {
+    position: fixed;
+    bottom: var(--padding);
+    width: 100%;
+    z-index: 1;
+  }
