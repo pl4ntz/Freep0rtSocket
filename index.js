@@ -10,7 +10,7 @@ const clients = [];	//track connected clients
 server.listen(port, () => {
 	console.log('Server listening at port %d', port);
   });
-  
+
 // Routing
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -39,9 +39,4 @@ io.on('connection', socket =>{
 		io.emit(chatEvent, combinedMsg);
 		console.log('multicast: ' + combinedMsg);
 	});
-});
-
-//Start the Server
-http.listen(port, () => {
-  console.log('listening on *:' + port);
 });
