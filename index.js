@@ -1,12 +1,16 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const http = require('http').Server(app);
-const io = require('socket.io')(http);
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
 const util = require('util');
-const port = 3000;
+const port = process.env.PORT || 3000;
 const clients = [];	//track connected clients
 
+server.listen(port, () => {
+	console.log('Server listening at port %d', port);
+  });
+  
 // Routing
 app.use(express.static(path.join(__dirname, 'public')));
 
