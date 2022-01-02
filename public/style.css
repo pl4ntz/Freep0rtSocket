@@ -189,8 +189,8 @@ top: 149px;
 
 .menu:hover {
 background: var(--Three);
-border-top: 2px solid var(--Two);
-border-bottom: 2px solid var(--Three);
+border-top: 2px solid var(--Four);
+border-bottom: 2px solid var(--Zero);
 }
 
 .menu {
