@@ -27,7 +27,7 @@ width: 16px;
 
 /* Track */
 ::-webkit-scrollbar-track {
-background: var(--gray0);
+background: var(--Zero);
 }
 
 /* Handle */
@@ -56,15 +56,11 @@ margin: unset;
 
 .qu4d-1:hover,
 .qu4d-2:hover {
-background: var(--gray1);
-}
-
-.Freep0rt {
-top: 0;
+background: var(--One);
 }
 
 .qu4d-1 {
-top: 32px;
+top: px;
 }
 
 .qu4d-2 {
@@ -81,15 +77,15 @@ h3 {color: var(--Six);}
 .gray-1 {color: var(--Five);}
 
 .gray0 {
-color: var(--gray0);
+color: var(--Zero);
 }
 
 .gray1 {
-color: var(--gray1);
+color: var(--Zero);
 }
 
 .gray2 {
-color: var(--gray2);
+color: var(--One);
 }
 
 .green {
@@ -97,7 +93,7 @@ color: var(--green);
 text-decoration: none;
 }
 
-a.green:link {color: var(--green);text-decoration: none;background: var(--Two);}
+a.green:link {color: var(--green);text-decoration: none;}
 
 a.green:hover {
 color: var(--greenHover);
@@ -106,10 +102,11 @@ text-decoration: underline;
 
 .menu {
   margin: -16px -16px 16px -16px;
-padding: 16px;
+  padding: 16px;
+  background: var(--Two);
 }
 
-a.green:hover {color: var(--greenHover);text-decoration: underline;background: var(--gray-1);}
+a.green:hover {color: var(--greenHover);text-decoration: underline;}
 
 .blue {
 color: var(--blue);
@@ -136,11 +133,26 @@ right: 16px;
 .menuBars {
   width: 20px;
   height: 4px;
-  background-color: var(--gray-2);
+  background-color: var(--Five);
   margin: 4px 0;
 }*/
 
 @media screen and (min-width: 769px) {
+
+.TopRow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: var(--padding);
+  background: var(--One);
+  z-index: 1;
+}
+
+.row {
+  position: absolute;
+  top: 64px;
+}
 
 .Freep0rt {
   float: left;
@@ -151,11 +163,11 @@ right: 16px;
 }
 
 .qu4d-1 {
-top: 0;
+top: 64px;
 }
 
 .qu4d-2 {
-top: 85px;
+top: 149px;
 }
 
 .qu4d-1,
@@ -176,13 +188,17 @@ top: 85px;
 }
 
 .menu:hover {
-background: var(--gray0);
+background: var(--Three);
+border-top: 2px solid var(--Two);
+border-bottom: 2px solid var(--Three);
 }
 
 .menu {
   padding-top: var(--padding);
+  background: var(--Two);
   border-top: 2px solid var(--Three);
 }
+
     #main {
   padding-top: 138px!important;
       padding-left: 256px;
@@ -190,12 +206,12 @@ background: var(--gray0);
     form input {
   border: 0;
   margin-right: unset!important;
-  background: var(--gray1);
+  background: var(--Zero);
   color: var(--green);
   width: calc(100% - 64px)!important;
   }
     form {
-      padding-right: 288px;
+      padding-right: 253px;
     }
     #messages {
   position: relative;
@@ -220,7 +236,7 @@ background: var(--gray0);
     #messages li { padding-top: var(--padding);
       margin-left: 16px;
     }
-    #messages li:nth-child(odd) { background: var(--gray1); }
+    #messages li:nth-child(odd) { background: var(--One); }
     #main {
       overflow: auto;
       padding-top: 154px;
@@ -228,7 +244,7 @@ background: var(--gray0);
     } 
     #footer {
     position: fixed;
-    bottom: var(--padding);
+    bottom: 0;
     width: 100%;
     z-index: 1;
   }
