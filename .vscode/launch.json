@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "name": "Launch Microsoft Edge and open the Edge DevTools",
+            "request": "launch",
+            "type": "vscode-edge-devtools.debug",
+            "url": "file:///C:/Users/Sh4wnB0b/Documents/Unreal%20Projects/Freep0rt/Net/Server/Freep0rt/public/index.html" // Provide your project's url to finish configuring
+        }
+    ]
+}

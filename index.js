@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 const clients = [];	//track connected clients
 
 server.listen(port, () => {
-	console.log('Server listening at port %d', port);
+	console.log('Server: http://localhost:%d', port);
   });
 
 // Routing

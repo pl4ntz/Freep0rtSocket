@@ -1,10 +1,12 @@
 :root {
---gray-2: #e6e6e6;
---gray-1: #acacac;
---gray0: #292929;
---gray1: #212121;
---gray2: #171717;
---gray3: #111111;
+  --Zero: #0f0f0f;
+  --One: #151515;
+  --Two: #1a1a1a;
+  --Three: #242424;
+  --Four: #383838;
+  --Five: #626262;
+  --Six: #c0c0c0;
+  --Seven: #ffffff;
 --green: #63b456;
 --greenHover: #47ff60;
 --blue: #4894fe;
@@ -40,17 +42,12 @@ background: var(--thumbHover);
 
 button:hover {
   background: var(--greenHover);
+  border-top: 2px solid var(--Zero);
 }
 
 .Freep0rt,
 .qu4d-1,
-.qu4d-2 {
-position: fixed;
-width: 100%;
-padding: var(--padding);
-background: var(--gray1);
-z-index: 1;
-}
+.qu4d-2 {position: fixed;width: 100%;padding: var(--padding);background: var(--One);z-index: 1;}
 
 .qu4d-1,
 .qu4d-2 {
@@ -79,13 +76,9 @@ margin: unset;
 }
 
 .gray-2,
-h3 {
-color: var(--gray-2);
-}
+h3 {color: var(--Six);}
 
-.gray-1 {
-color: var(--gray-1);
-}
+.gray-1 {color: var(--Five);}
 
 .gray0 {
 color: var(--gray0);
@@ -104,10 +97,7 @@ color: var(--green);
 text-decoration: none;
 }
 
-a.green:link {
-color: var(--green);
-text-decoration: none;
-}
+a.green:link {color: var(--green);text-decoration: none;background: var(--Two);}
 
 a.green:hover {
 color: var(--greenHover);
@@ -119,10 +109,7 @@ text-decoration: underline;
 padding: 16px;
 }
 
-a.green:hover {
-color: var(--greenHover);
-text-decoration: underline;
-}
+a.green:hover {color: var(--greenHover);text-decoration: underline;background: var(--gray-1);}
 
 .blue {
 color: var(--blue);
@@ -138,11 +125,7 @@ padding: 0;
 box-sizing: border-box;
 }
 
-body {
-background: var(--gray1);
-color: var(--gray-1);
-font-family: var(--font-family);
-}
+body {background: var(--One);color: var(--Five);font-family: var(--font-family);}
 
 /* .menuButton {
 position: absolute;
@@ -163,7 +146,7 @@ right: 16px;
   float: left;
   width: 256px;
   height: 100%;
-  border-right: 1px solid var(--gray2);
+  border-right: 2px solid var(--Zero);
   border-bottom: unset;
 }
 
@@ -175,13 +158,6 @@ top: 0;
 top: 85px;
 }
 
-.borderLeft {
-  position: fixed;
-  height: 100%;
-  margin-left: 256px;
-  border-left: 1px solid var(--gray0);
-}
-
 .qu4d-1,
 .qu4d-2,
 .borderTop {
@@ -190,13 +166,13 @@ top: 85px;
 
 .qu4d-1BorderTop {
   margin: -16px -16px 16px -16px;
-  border-top: 1px solid var(--gray0);
+  border-top: 2px solid var(--One);
 }
 
 .Freep0rt a {
   display: block;
   padding-bottom: var(--padding);
-  border-bottom: 1px solid var(--gray2);
+  border-bottom: 2px solid var(--Zero);
 }
 
 .menu:hover {
@@ -205,14 +181,19 @@ background: var(--gray0);
 
 .menu {
   padding-top: var(--padding);
-  border-top: 1px solid var(--gray0);
+  border-top: 2px solid var(--Three);
 }
     #main {
   padding-top: 138px!important;
       padding-left: 256px;
     } 
-    form input { border: 0; margin-right: unset!important;  background: var(--gray1); color: var(--green);
-  width: calc(100% - 64px)!important; }
+    form input {
+  border: 0;
+  margin-right: unset!important;
+  background: var(--gray1);
+  color: var(--green);
+  width: calc(100% - 64px)!important;
+  }
     form {
       padding-right: 288px;
     }
@@ -222,12 +203,19 @@ background: var(--gray0);
 
 }
     form { width: 100%; }
-    form input { border: 0; padding: var(--padding);
-  width: calc(100% - 64px)!important; background: var(--gray2); color: var(--green); }
+    form input {
+  border: 0;
+  padding: calc(var(--padding) - 2px);
+  width: calc(100% - 64px)!important;
+  background: var(--Zero);
+  border-top: 2px solid var(--Three);
+  border-bottom: 2px solid var(--Zero);
+  color: var(--green);
+  }
     :focus-visible {
         outline: unset;
     }
-    form button { background: var(--green); border: none; padding: var(--padding); }
+    form button {background: var(--green);border-bottom: 2px solid var(--Three);padding: calc(var(--padding) - 2px);}
     #messages {list-style-type: none;margin: 0;margin-bottom: 80px;}
     #messages li { padding-top: var(--padding);
       margin-left: 16px;
